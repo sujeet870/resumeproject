@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="disign.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+
+
+
+                   /* background image */
+.bgImage{
+     
+  width: 100%;
+  height: 100vh;
+  background-image: url(https://wallpapercave.com/uwp/uwp1572245.png);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  
+
+}
+/* _______________________bubble flying style____________ */
+
+.bubble img{
+      width: 50px;
+      animation: bubble 5s linear infinite;
+
+}
+
+.bubble{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+
+        align-items: center;
+
+
+        position: absolute;
+        bottom: -70px;
+        
+        
+}
+
+@keyframes bubble{
+  0%{
+      transform: translatey(0);
+      opacity: 0;
+  }
+
+ 50%{
+      
+      opacity: 1;
+  }
+
+  70%{
+      
+      opacity: 1;
+  }
+
+  100%{
+      transform: translatey(-80vh);
+      opacity: -70px;
+  }
+}
+
+.bubble img:nth-child(1){
+  animation-delay: 2s;
+  width: 25px;
+}
+
+.bubble img:nth-child(2){
+  animation-delay: 2s;
+
+}
+.bubble img:nth-child(3){
+  animation-delay: 3s;
+}
+
+.bubble img:nth-child(4){
+  animation-delay: 4s;
+  width: 20px;
+}
+
+.bubble img:nth-child(5){
+  animation-delay: 5s;
+  width: 35px;
+}
+
+.bubble img:nth-child(6){
+  animation-delay: 6s;
+}
+
+
+
+
+/* ______________________________________left and right child parent  */
+.parent{
+
+  width: 100%;
+  height: 100%;
+  display: flex;
+  margin: auto;
+  border-radius: 30px;
+
+}
+
+/* ____________________________________________LEFT AND RIGHT BOX  */
+.boxleft{
+   border: 2px solid rgb(163, 242, 248); 
+   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  height:100%;
+  width: 20%;
+border-top-left-radius: 30px;
+border-top-right-radius: 30px;}
+
+
+
+/* _________________________________right box style______________                            */
+
+
+.boxright{
+  
+  height:100%;
+  width: 80%;
+  border-radius: 30px;
+}
+ 
+
+
+/* CONTENT */
+
+
+
+
+
+.boxleft>img{
+  width: 100%;
+  height: 100%;
+
+}
+
+h1{
+  font-size: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  -webkit-text-stroke: 1px rgb(184, 115, 11);
+  margin-top: 20px;
+  text-align: center;
+}
+
+h1::before{
+  content: "JUNGLE BOOK ";
+  position: absolute;
+  width: 0%;
+  height: 40px;
+  overflow: hidden;
+  color:#FF00FF;
+
+  transition-duration: 1s;
+}
+
+h1:hover::before{
+  width: 40%;
+  filter: drop-shadow(0 0 25px rgb(243, 161, 9));
+  height:100% ;
+}
+
+
+
+
+
+
+
+
+  .threebx{
+      
+      display: flex;
+
+      align-items: flex-end;
+      justify-content: space-around;
+
+      
+      
+      gap:30px ;
+      margin-top: 20px;
+    
+  
+    /* overflow: hidden; */
+    
+   
+    
+     /* ------------------------------three card    ------------------- */
+
+
+  }
+  .card{
+      position: relative;
+      width: 200px;
+      height: 150px;
+      background:#287bff;
+      /* margin: 30px; */
+      border-radius: 20px;
+      border-bottom-left-radius: 160px;
+      border-bottom-right-radius: 160px;
+      box-shadow: 0px 15px 0 #ffff;
+      inset: 0 -15px 0 rgba(255,255,255,0.25),0 45px 0 rgba(0,0,0,0.15);
+      overflow: hidden;
+      display: flex;
+
+      overflow: hidden;  
+       
+  }
+
+  .card:hover{
+      transform: scale(1.1);
+        
+  }
+
+  .card::before 
+  {
+      content: '';
+      position: absolute;
+      top: -100px;
+      left: -40%;  
+      width: 100%;
+      height: 150%;
+      background: linear-gradient(90deg,translate,rgba)(255,255,255,0.2);
+      transform: rotate(35deg);
+      pointer-events: none;
+      filter: blur(5px);
+      
+      
+  }
+
+  .card:nth-child(1)
+  {
+      background: linear-gradient(to bottom,#ff2ae0,#645bf6);
+      
+  }
+  .card:nth-child(2)
+  {
+      background: linear-gradient(to bottom,#ffec61,#f321d7);
+  }
+  .card:nth-child(3)
+  {
+      background: linear-gradient(to bottom,#24ff72,#9a4eff);
+
+
+  }
+
+
+
+  ion-icon{
+      font-size: 20px;
+      display: block;
+      margin-left: 20px;
+      margin-top: 6px;
+      justify-content: center;
+      
+  }
+  .icon
+  {
+      margin-left: 10px;
+  }
+
+  ul{
+    text-align: center;
+    margin-left: 30px;
+    margin-top: 15px;
+    
+  }
+u
+
+
+  ul,p{
+      font-size: 10px;
+     
+  }
+  li{
+      margin-left: 20px;
+  }
+
+  .rightc{border: 2px solid blue;
+      display: block;
+      flex-direction: column;
+      height: 100px;
+      width: 0;
+      margin-left: 200px;
+      
+  }
+
+
+   /* _________________RIGHT SIDE____________ */
+
+   .right{
+      
+      /* padding-right: 75px; */
+      color: black;
+      /* text-align: center; */
+      color: #ffec61;
+   }
+
+   .box{
+      display: inline-block;
+      /* padding: 2px 70px 2px 20px; */
+      margin-left: 20px;
+      margin-top: 35px;
+      background: linear-gradient(45deg,#03a9f4,#ff53a0);
+
+      
+   }
+   .box:hover{
+      transform: scale(1.1);}
+   
+
+   .dec{
+      margin-top: 15px;
+      list-style:1.5;
+      margin-left: 20px;
+      text-align: justify;
+      font-weight: 200;
+      color: #862d04 ;
+      padding-left: 10px;
+      
+      
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      width: 55%;
+     
+      
+   }
+    .dec:hover{
+      transform: scale(1.1);
+    }
+
+
+   .video{
+
+      border-radius: 200px 500px;
+      /* margin-left: 500px; */
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      
+   }
+
+   .videop{
+      display: flex;
+      margin: auto;
+      justify-content: space-around;
+   }
+
+
+.video:hover{
+   transform: scale(1.1);}
+
+
+    </style>
+</head>
+<body>
+        
+<div class="bgImage">
+
+          <div class="parent">
+            <div class="boxleft">
+              <h1 class="name">JUNGLE BOOK <br>Mowgli</h1><BR><span></span>
+                <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8ee36483-e5ba-4ed8-bcc5-8663fca9fe2d/dfak6zl-0a4efd86-8f3a-4aff-afec-ab9dc1339d2e.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzhlZTM2NDgzLWU1YmEtNGVkOC1iY2M1LTg2NjNmY2E5ZmUyZFwvZGZhazZ6bC0wYTRlZmQ4Ni04ZjNhLTRhZmYtYWZlYy1hYjlkYzEzMzlkMmUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.W-9t0rK3FMfGzlVjdqmao8H_WFgObBj0OaJx46rMBeY" alt="">
+
+              </div>
+                 
+               <div class="boxright">
+                <div class="right">
+                  <div  class="videop">
+
+                    <div><iframe class="video" width="200" height="110" src="https://www.youtube.com/embed/wzE4C-TKjrk?si=XPy_irR_hmlH859O" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                      <div><iframe class="video" width="200" height="110" src="https://www.youtube.com/embed/x1TNc0zOYX0?si=8hXy5kXvd8WYAe8d" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                      <div><iframe class="video" width="200" height="110" src="https://www.youtube.com/embed/5n8YY4p-0F0?si=xRR7eVFaVGciGJ7e" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                      <div><iframe class="video" width="200" height="110" src="https://www.youtube.com/embed/2qoPBMhi6LI?si=Dr-o-OqOmVS6VS1R" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                    </div>
+                    </div>
+                       
+                
+
+                <div class="group1">
+                  <div class="box">
+                    <h4 >About Me </h4>
+                  </div>
+                  <div class="dec">
+                    "I am Mowgli, a young and resourceful individual who has spent his entire life,<br>
+                     amidst the wonders of the jungle. Raised by a wolf pack and nurtured by the <br>
+                      the jungle's diverse inhabitants, I have developed exceptional survival and <br>
+                       skills. Fluent in the languages of wolves, panthers, bears, snakes, and elo <br>
+                       learned to navigate the complex and ever-changing environment of the wild.   <br>
+                       
+                  </div>
+                  <div class="group2">
+                    <div class="box">
+                      <h4>SUMMARY</h4>
+                      </div>
+                      <div class="dec">Mowgli is a young and dynamic individual whose lifethe<br>
+                           has been shaped by the rich tapestry of the jungle. Raised by  new<br>
+                            wolves and mentored by a panther, a bear, and a snake, I have <br>
+                            developed an extraordinary ability to communicate with the animal</div>
+
+                  </div>
+
+                </div>
+
+                <div class="threebx">
+                  
+                <div class="card">
+                  
+                  
+                  <div><ion-icon name="call-outline"></ion-icon>+123-456-7890
+                    <ion-icon name="mail-outline"></ion-icon><p class="icon">
+                      mowgli05@gmail.com</p></div>
+                </div>
+                <div class="card">
+                  <ul>
+                    
+                      <h2>LANGUAGE</h2>
+                    
+                    <li><p>English</p></li>
+                    <li><p>Hindi</p></li>
+                    <li><p>Spanish</p></li>
+                  </ul>
+                </div>
+
+                
+                <div class="card">
+                  <ul>
+                    <h2>EDUCATION</h2>
+                    <li><p>Borcelle univercity</p></li>
+                    <li><p>bachlor in Cartoon</p></li>
+                    <li><p>2014-2018</p></li>
+                  </ul>
+
+                </div>
+
+                
+                <div class="card">
+                  <ul>
+                    <h2>EXPERTISE</h2>
+                    <li><p>Management Skills</p></li>
+                    <li><p>Creativity</p></li>
+                    <li><p>Critical thnking</p></li>
+                    <li><p>Leadership</p></li>
+                  </ul>
+                </div>
+
+
+                </div>
+
+            </div>
+          </div> 
+          <div class="bubble">
+            <img src="https://i.postimg.cc/050SsrRS/bubble.png" alt="">
+
+            <img src="https://i.postimg.cc/050SsrRS/bubble.png" alt="">
+
+            <img src="https://i.postimg.cc/050SsrRS/bubble.png" alt="">
+
+            <img src="https://i.postimg.cc/050SsrRS/bubble.png" alt="">
+
+            <img src="https://i.postimg.cc/050SsrRS/bubble.png" alt="">
+
+            <img src="https://i.postimg.cc/050SsrRS/bubble.png" alt="">
+
+            <img src="https://i.postimg.cc/050SsrRS/bubble.png" alt="">
+            </div>
+
+           
+               
+         </div>
+
+         
+</body>
+</html>
